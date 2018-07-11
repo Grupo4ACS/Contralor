@@ -23,4 +23,13 @@ public class AutorizadorViajes {
     		return Response.notAcceptable(null).build();
     	}    	
     }
+  
+    @PUT
+	  public Response autorizar(Object paquete) {
+      if (rand.nextBoolean()) {
+    		return Response.accepted().build();
+    	} else {
+    		return Response.notAcceptable(paquete).build();
+    	}    	
+    }
 }
